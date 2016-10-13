@@ -3,12 +3,12 @@ import sys, os
 import operator
 
 if len(sys.argv) < 2:
-	sys.exit("Usage: &s filename" % sys.argv[0])
+	sys.exit("Usage: %s filename" % sys.argv[0])
 
 filename = sys.argv[1]
 
 if not os.path.exists(filename):
-	sys.exit("Errot: File '%s not found" % sys.argv[1])
+	sys.exit("Error: File %s not found" % sys.argv[1])
 
 group_regex = re.compile(r"(\w+ \w+) batted (\d) times with (\d) hits and \d runs")
 def get_stats(str):
